@@ -9,13 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        NavigationStack {
+            ZStack{
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea(.all)
+                VStack {
+                    // navigation
+                    NavigationLink(destination: GetView()) {
+                        Text("Fetch Data")
+                            .padding()
+                            .background(Color.white.opacity(0.8))
+                            .foregroundColor(.theme.Bcolor)
+                            .cornerRadius(10)
+                            .font(.title)
+                    }
+                    .padding()
+                    NavigationLink(destination: PostView()) {
+                        Text("Post Data")
+                            .padding()
+                            .background(Color.white.opacity(0.8))
+                            .foregroundColor(.theme.Bcolor)
+                            .cornerRadius(10)
+                            .font(.title)
+                    }
+                }
+                .navigationTitle("")
+                
+                
+            }
         }
-        .padding()
     }
 }
 
