@@ -4,7 +4,7 @@ This project demonstrates how to perform GET and POST requests using Alamofire i
 
 ## Features
 
-GET Request: Fetches posts from https://jsonplaceholder.typicode.com/posts. and from https://dummyjson.com/posts
+GET Request: Fetches posts from https://jsonplaceholder.typicode.com/posts and from https://dummyjson.com/posts .
 
 POST Request: Creates a new post with dummy data.
 
